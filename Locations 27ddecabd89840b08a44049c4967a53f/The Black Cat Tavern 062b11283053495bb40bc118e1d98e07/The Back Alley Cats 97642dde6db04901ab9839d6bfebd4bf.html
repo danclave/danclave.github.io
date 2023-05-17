@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>The Back Alley Cats</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="97642dde-6db0-4901-ab98-39d6bfebd4bf" class="page sans"><header><img class="page-cover-image" src="https://cs9.pikabu.ru/post_img/2020/03/09/3/1583726239149511869.jpg" style="object-position:center 26.049999999999997%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://www.notion.so/icons/card-club_gray.svg"/></div><h1 class="page-title">The Back Alley Cats</h1></header><div class="page-body"><h2 id="5462c3f3-4bf9-429c-9eff-85f0a3e61877" class=""><strong>The Gang</strong></h2><p id="6544695c-bc10-4efc-92de-394ebf9103b7" class="">The Back Alley Cats are a gang of halflings operating in the Barnacles district of Arcadia. They are known for their fierce loyalty to each other and their willingness to protect other halflings in their part of the slums.</p><p id="f6c21fa1-347c-436f-8b18-fa285f913b8d" class="">Halflings are generally a peaceful and friendly race, and they are often targeted for exploitation due to their docile nature. However, there are some halflings who are more rebellious and aggressive, and they band together in gangs like the Back Alley Cats to protect their softer brethren and assert themselves in a harsh and dangerous environment.</p><p id="2a7fa553-9fe8-4e09-9c3a-0ab1e96551f5" class="">As a gang operating in the Barnacles, the Back Alley Cats engage in various unscrupulous activities in order to survive and protect their territory. They are involved in smuggling, protection rackets and contract fixing.</p><p id="8f5cae38-2a24-4116-a6ae-dbff85d2e68c" class="">
+</p><div id="8fc2b2e3-35fb-494c-a858-f8d80654cce5" class="collection-content"><h4 class="collection-title">Characters</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Tags</th><th><span class="icon property-icon"><div style="width:14px;height:14px;transform:scale(1.2);mask:url(/icons/game-pawn_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/game-pawn_gray.svg?mode=light) no-repeat center;background-color:rgba(55, 53, 47, 0.45);fill:rgba(55, 53, 47, 0.45)"></div></span>Battle Tokens</th><th><span class="icon property-icon"><div style="width:14px;height:14px;transform:scale(1.2);mask:url(/icons/map_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/map_gray.svg?mode=light) no-repeat center;background-color:rgba(55, 53, 47, 0.45);fill:rgba(55, 53, 47, 0.45)"></div></span>Location</th><th><span class="icon property-icon"><div style="width:14px;height:14px;transform:scale(1.2);mask:url(/icons/sharing_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/sharing_gray.svg?mode=light) no-repeat center;background-color:rgba(55, 53, 47, 0.45);fill:rgba(55, 53, 47, 0.45)"></div></span>Related Characters</th></tr></thead><tbody><tr id="58c3d8cf-a193-4961-a5f5-3f9e6a091e07"><td class="cell-title"><a href="https://www.notion.so/Slick-58c3d8cfa1934961a5f53f9e6a091e07"><img class="icon" src="https://www.notion.so/icons/user-circle_gray.svg"/>Slick</a></td><td class="cell-?Jgt"><span class="selected-value select-value-color-yellow">Arcadia</span><span class="selected-value select-value-color-default">Back Alley Cats</span><span class="selected-value select-value-color-brown">Barnacles</span><span class="selected-value select-value-color-green">Halfling</span></td><td class="cell-^=|x"><a href="https://www.notion.so/Slick-026cb49c0e164450b51abf62d2271a50"><img class="icon" src="https://www.notion.so/icons/user-circle_blue.svg"/>Slick</a></td><td class="cell-j[Hh"><a href="../The%20Black%20Cat%20Tavern%20062b11283053495bb40bc118e1d98e07.html"><img class="icon" src="https://www.notion.so/icons/beer_blue.svg"/>The Black Cat Tavern</a></td><td class="cell-;L&lt;F"></td></tr><tr id="9decb8e3-5903-4114-b8bc-81afa9560534"><td class="cell-title"><a href="https://www.notion.so/Winona-Winnie-Acheron-9decb8e359034114b8bc81afa9560534"><img class="icon" src="https://www.notion.so/icons/user-circle-filled_purple.svg"/>Winona ‘Winnie’ Acheron </a></td><td class="cell-?Jgt"><span class="selected-value select-value-color-yellow">Arcadia</span><span class="selected-value select-value-color-purple">player character</span></td><td class="cell-^=|x"></td><td class="cell-j[Hh"><a href="../Arcadia%207e193d782623417c996b1e0881c837f3.html"><img class="icon" src="https://www.notion.so/icons/city_gray.svg"/>Arcadia</a></td><td class="cell-;L&lt;F"><a href="https://www.notion.so/Kane-76ddd49f66774fa6a34126e11b65f678"><img class="icon" src="https://www.notion.so/icons/question-mark_blue.svg"/>Kane</a></td></tr><tr id="3dbb7c89-3ae8-4fc8-bcd6-7031a303a384"><td class="cell-title"><a href="https://www.notion.so/Linkin-Coop-3dbb7c893ae84fc8bcd67031a303a384"><img class="icon" src="https://www.notion.so/icons/user-circle-filled_purple.svg"/>Linkin Coop</a></td><td class="cell-?Jgt"><span class="selected-value select-value-color-yellow">Arcadia</span><span class="selected-value select-value-color-default">Back Alley Cats</span><span class="selected-value select-value-color-green">Halfling</span><span class="selected-value select-value-color-purple">player character</span><span class="selected-value select-value-color-orange">todo</span></td><td class="cell-^=|x"></td><td class="cell-j[Hh"><a href="../Arcadia%207e193d782623417c996b1e0881c837f3.html"><img class="icon" src="https://www.notion.so/icons/city_gray.svg"/>Arcadia</a></td><td class="cell-;L&lt;F"></td></tr><tr id="f2adcf11-20c4-439b-b216-c8081994997f"><td class="cell-title"><a href="https://www.notion.so/Karl-Steiner-f2adcf1120c4439bb216c8081994997f"><img class="icon" src="https://www.notion.so/icons/user-circle-filled_purple.svg"/>Karl Steiner</a></td><td class="cell-?Jgt"><span class="selected-value select-value-color-yellow">Arcadia</span><span class="selected-value select-value-color-purple">player character</span></td><td class="cell-^=|x"></td><td class="cell-j[Hh"><a href="../Arcadia%207e193d782623417c996b1e0881c837f3.html"><img class="icon" src="https://www.notion.so/icons/city_gray.svg"/>Arcadia</a></td><td class="cell-;L&lt;F"></td></tr><tr id="91e0acec-94a6-4740-add3-f1a858f7331a"><td class="cell-title"><a href="https://www.notion.so/Cog-91e0acec94a64740add3f1a858f7331a"><img class="icon" src="https://www.notion.so/icons/user-circle-filled_purple.svg"/>Cog</a></td><td class="cell-?Jgt"><span class="selected-value select-value-color-yellow">Arcadia</span><span class="selected-value select-value-color-purple">player character</span></td><td class="cell-^=|x"></td><td class="cell-j[Hh"><a href="../Arcadia%207e193d782623417c996b1e0881c837f3.html"><img class="icon" src="https://www.notion.so/icons/city_gray.svg"/>Arcadia</a></td><td class="cell-;L&lt;F"><a href="https://www.notion.so/Professor-Archibald-Grimstone-48e5c9bb39e040d4acacc3c113a3354d"><img class="icon" src="https://www.notion.so/icons/user-circle-filled_red.svg"/>Professor Archibald Grimstone</a></td></tr><tr id="e6ab899f-c87f-4ae8-b0f4-f437cd5bcac5"><td class="cell-title"><a href="https://www.notion.so/Samuel-e6ab899fc87f4ae8b0f4f437cd5bcac5"><img class="icon" src="https://www.notion.so/icons/user-circle_blue.svg"/>Samuel</a></td><td class="cell-?Jgt"><span class="selected-value select-value-color-yellow">Arcadia</span><span class="selected-value select-value-color-brown">Barnacles</span><span class="selected-value select-value-color-blue">The Lilith (Ship)</span></td><td class="cell-^=|x"></td><td class="cell-j[Hh"><a href="../The%20Flooded%20District%20aaf94b26e97b43ca9740471b6cc7114e.html"><img class="icon" src="https://www.notion.so/icons/directional-sign-right_gray.svg"/>The Flooded District</a></td><td class="cell-;L&lt;F"><a href="https://www.notion.so/Laslo-Voorstik-b5e1b568f1c74c38889e18c618b71f5e"><img class="icon" src="https://www.notion.so/icons/user-circle_gray.svg"/>Laslo Voorstik</a></td></tr><tr id="41e7c72b-dac7-4b6c-b2ee-ba06a870d0a1"><td class="cell-title"><a href="https://www.notion.so/Tolbin-41e7c72bdac74b6cb2eeba06a870d0a1"><img class="icon" src="https://www.notion.so/icons/user-circle_gray.svg"/>Tolbin</a></td><td class="cell-?Jgt"><span class="selected-value select-value-color-yellow">Arcadia</span><span class="selected-value select-value-color-brown">Barnacles</span><span class="selected-value select-value-color-green">Halfling</span></td><td class="cell-^=|x"></td><td class="cell-j[Hh"><a href="../Tolbin%E2%80%99s%20Store%203bfb909d94c648768bd0eb459393d83f.html"><img class="icon" src="https://www.notion.so/icons/shop_gray.svg"/>Tolbin’s Store</a></td><td class="cell-;L&lt;F"></td></tr><tr id="5cceb835-40b2-4f08-b535-0f9de225c707"><td class="cell-title"><a href="https://www.notion.so/Silent-Joe-5cceb83540b24f08b5350f9de225c707"><img class="icon" src="https://www.notion.so/icons/user-circle_gray.svg"/>“Silent&quot; Joe</a></td><td class="cell-?Jgt"><span class="selected-value select-value-color-yellow">Arcadia</span><span class="selected-value select-value-color-default">Back Alley Cats</span><span class="selected-value select-value-color-brown">Barnacles</span></td><td class="cell-^=|x"></td><td class="cell-j[Hh"><a href="../The%20Black%20Cat%20Tavern%20062b11283053495bb40bc118e1d98e07.html"><img class="icon" src="https://www.notion.so/icons/beer_blue.svg"/>The Black Cat Tavern</a></td><td class="cell-;L&lt;F"></td></tr><tr id="d5c16733-3fd3-47f3-b8d2-1c847bbd8f21"><td class="cell-title"><a href="https://www.notion.so/Captain-Kenny-d5c167333fd347f3b8d21c847bbd8f21"><img class="icon" src="https://www.notion.so/icons/user-circle_gray.svg"/>Captain&quot; Kenny</a></td><td class="cell-?Jgt"><span class="selected-value select-value-color-yellow">Arcadia</span><span class="selected-value select-value-color-default">Back Alley Cats</span><span class="selected-value select-value-color-brown">Barnacles</span></td><td class="cell-^=|x"></td><td class="cell-j[Hh"><a href="../The%20Black%20Cat%20Tavern%20062b11283053495bb40bc118e1d98e07.html"><img class="icon" src="https://www.notion.so/icons/beer_blue.svg"/>The Black Cat Tavern</a></td><td class="cell-;L&lt;F"></td></tr><tr id="33101e5a-8620-4896-b391-04d21d1f77ee"><td class="cell-title"><a href="https://www.notion.so/Sly-Sally-33101e5a86204896b39104d21d1f77ee"><img class="icon" src="https://www.notion.so/icons/user-circle_gray.svg"/>&quot;Sly&quot; Sally</a></td><td class="cell-?Jgt"><span class="selected-value select-value-color-yellow">Arcadia</span><span class="selected-value select-value-color-default">Back Alley Cats</span><span class="selected-value select-value-color-brown">Barnacles</span></td><td class="cell-^=|x"></td><td class="cell-j[Hh"><a href="../The%20Black%20Cat%20Tavern%20062b11283053495bb40bc118e1d98e07.html"><img class="icon" src="https://www.notion.so/icons/beer_blue.svg"/>The Black Cat Tavern</a></td><td class="cell-;L&lt;F"></td></tr><tr id="0f895579-775c-4f8b-bd27-18a012c12d84"><td class="cell-title"><a href="https://www.notion.so/Mad-Mike-0f895579775c4f8bbd2718a012c12d84"><img class="icon" src="https://www.notion.so/icons/user-circle_gray.svg"/>&quot;Mad&quot; Mike</a></td><td class="cell-?Jgt"><span class="selected-value select-value-color-yellow">Arcadia</span><span class="selected-value select-value-color-default">Back Alley Cats</span><span class="selected-value select-value-color-brown">Barnacles</span></td><td class="cell-^=|x"></td><td class="cell-j[Hh"><a href="../The%20Black%20Cat%20Tavern%20062b11283053495bb40bc118e1d98e07.html"><img class="icon" src="https://www.notion.so/icons/beer_blue.svg"/>The Black Cat Tavern</a></td><td class="cell-;L&lt;F"></td></tr><tr id="17297c90-1fea-452f-b069-1bb1051bfc62"><td class="cell-title"><a href="https://www.notion.so/Whisper-Will-17297c901fea452fb0691bb1051bfc62"><img class="icon" src="https://www.notion.so/icons/user-circle_gray.svg"/>Whisper&quot; Will</a></td><td class="cell-?Jgt"><span class="selected-value select-value-color-yellow">Arcadia</span><span class="selected-value select-value-color-default">Back Alley Cats</span><span class="selected-value select-value-color-brown">Barnacles</span></td><td class="cell-^=|x"></td><td class="cell-j[Hh"><a href="../The%20Black%20Cat%20Tavern%20062b11283053495bb40bc118e1d98e07.html"><img class="icon" src="https://www.notion.so/icons/beer_blue.svg"/>The Black Cat Tavern</a></td><td class="cell-;L&lt;F"></td></tr><tr id="48e5c9bb-39e0-40d4-acac-c3c113a3354d"><td class="cell-title"><a href="https://www.notion.so/Professor-Archibald-Grimstone-48e5c9bb39e040d4acacc3c113a3354d"><img class="icon" src="https://www.notion.so/icons/user-circle-filled_red.svg"/>Professor Archibald Grimstone</a></td><td class="cell-?Jgt"><span class="selected-value select-value-color-red">antagonist</span></td><td class="cell-^=|x"></td><td class="cell-j[Hh"><a href="../The%20Academy%20070edd98762e4d66880fdf29dd8366aa.html"><img class="icon" src="https://www.notion.so/icons/map-pin-alternate_gray.svg"/>The Academy</a></td><td class="cell-;L&lt;F"><a href="https://www.notion.so/Cog-91e0acec94a64740add3f1a858f7331a"><img class="icon" src="https://www.notion.so/icons/user-circle-filled_purple.svg"/>Cog</a></td></tr><tr id="bba98a78-9473-4f30-b8cc-8f72209a1be1"><td class="cell-title"><a href="https://www.notion.so/Jack-Ironclaw-bba98a7894734f30b8cc8f72209a1be1"><img class="icon" src="https://www.notion.so/icons/user-circle-filled_red.svg"/>Jack ‘Ironclaw’</a></td><td class="cell-?Jgt"><span class="selected-value select-value-color-gray">Iron Claw Gang</span><span class="selected-value select-value-color-red">antagonist</span></td><td class="cell-^=|x"></td><td class="cell-j[Hh"><a href="../Ironclaw%20HQ%2063078f7fa3194e5db9e128beec957fe8.html"><img class="icon" src="https://www.notion.so/icons/map-pin-alternate_red.svg"/>Ironclaw HQ</a></td><td class="cell-;L&lt;F"></td></tr><tr id="b5e1b568-f1c7-4c38-889e-18c618b71f5e"><td class="cell-title"><a href="https://www.notion.so/Laslo-Voorstik-b5e1b568f1c74c38889e18c618b71f5e"><img class="icon" src="https://www.notion.so/icons/user-circle_gray.svg"/>Laslo Voorstik</a></td><td class="cell-?Jgt"><span class="selected-value select-value-color-yellow">Arcadia</span><span class="selected-value select-value-color-blue">The Lilith (Ship)</span></td><td class="cell-^=|x"></td><td class="cell-j[Hh"><a href="../The%20Whaling%20district%20745f616e2e5c4324a62a531bb8201613.html">The Whaling district</a></td><td class="cell-;L&lt;F"><a href="https://www.notion.so/Samuel-e6ab899fc87f4ae8b0f4f437cd5bcac5"><img class="icon" src="https://www.notion.so/icons/user-circle_blue.svg"/>Samuel</a></td></tr><tr id="76ddd49f-6677-4fa6-a341-26e11b65f678"><td class="cell-title"><a href="https://www.notion.so/Kane-76ddd49f66774fa6a34126e11b65f678"><img class="icon" src="https://www.notion.so/icons/question-mark_blue.svg"/>Kane</a></td><td class="cell-?Jgt"><span class="selected-value select-value-color-pink">Pirates</span></td><td class="cell-^=|x"></td><td class="cell-j[Hh"><a href="../Unknown%20dd887d2a0e844cff9e81410f6a71e9db.html"><img class="icon" src="https://www.notion.so/icons/question-mark_red.svg"/>Unknown</a></td><td class="cell-;L&lt;F"><a href="https://www.notion.so/Winona-Winnie-Acheron-9decb8e359034114b8bc81afa9560534"><img class="icon" src="https://www.notion.so/icons/user-circle-filled_purple.svg"/>Winona ‘Winnie’ Acheron </a></td></tr><tr id="4f1d0c51-5a26-4b13-aad3-b49e58919ea2"><td class="cell-title"><a href="https://www.notion.so/Big-Tony-4f1d0c515a264b13aad3b49e58919ea2"><img class="icon" src="https://www.notion.so/icons/user-circle_gray.svg"/>&quot;Big&quot; Tony</a></td><td class="cell-?Jgt"><span class="selected-value select-value-color-yellow">Arcadia</span><span class="selected-value select-value-color-default">Back Alley Cats</span><span class="selected-value select-value-color-brown">Barnacles</span><span class="selected-value select-value-color-green">Halfling</span></td><td class="cell-^=|x"></td><td class="cell-j[Hh"><a href="../The%20Black%20Cat%20Tavern%20062b11283053495bb40bc118e1d98e07.html"><img class="icon" src="https://www.notion.so/icons/beer_blue.svg"/>The Black Cat Tavern</a></td><td class="cell-;L&lt;F"></td></tr><tr id="a279055e-e405-480f-9ce4-4a01ecdc5234"><td class="cell-title"><a href="https://www.notion.so/Gilly-a279055ee405480f9ce44a01ecdc5234"><img class="icon" src="https://www.notion.so/icons/user-circle_gray.svg"/>Gilly</a></td><td class="cell-?Jgt"><span class="selected-value select-value-color-yellow">Arcadia</span></td><td class="cell-^=|x"></td><td class="cell-j[Hh"><a href="../Arcadia%207e193d782623417c996b1e0881c837f3.html"><img class="icon" src="https://www.notion.so/icons/city_gray.svg"/>Arcadia</a></td><td class="cell-;L&lt;F"><a href="https://www.notion.so/Malta-cc6fa3e8bb16430a863a1191f214b8b8"><img class="icon" src="https://www.notion.so/icons/user-circle_gray.svg"/>Malta</a></td></tr><tr id="cc6fa3e8-bb16-430a-863a-1191f214b8b8"><td class="cell-title"><a href="https://www.notion.so/Malta-cc6fa3e8bb16430a863a1191f214b8b8"><img class="icon" src="https://www.notion.so/icons/user-circle_gray.svg"/>Malta</a></td><td class="cell-?Jgt"><span class="selected-value select-value-color-yellow">Arcadia</span><span class="selected-value select-value-color-brown">Barnacles</span></td><td class="cell-^=|x"></td><td class="cell-j[Hh"><a href="../The%20Flooded%20District%20aaf94b26e97b43ca9740471b6cc7114e.html"><img class="icon" src="https://www.notion.so/icons/directional-sign-right_gray.svg"/>The Flooded District</a></td><td class="cell-;L&lt;F"><a href="https://www.notion.so/Gilly-a279055ee405480f9ce44a01ecdc5234"><img class="icon" src="https://www.notion.so/icons/user-circle_gray.svg"/>Gilly</a></td></tr></tbody></table></div></div></article></body></html>
